@@ -8,14 +8,14 @@ install -m 755 /tmp/v2ray/v2ray /usr/local/bin/v2ray
 install -m 755 /tmp/v2ray/v2ctl /usr/local/bin/v2ctl
 
 /usr/bin/frps -c frps.ini
-#wget -q https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-386.zip
-#unzip ngrok-stable-linux-386.zip
-#chmod +x ./ngrok
-#echo "### Update user: $USER password ###"
-#echo -e "$USER_PASS\n$USER_PASS" | sudo passwd "$USER"
-#echo "### Start ngrok proxy for 22 port ###"
-#./ngrok authtoken "$NGROK_TOKEN"
-#./ngrok tcp 22  &
+wget -q https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip
+unzip ngrok-stable-linux-amd64.zip
+chmod +x ./ngrok
+echo "### Update user: $USER password ###"
+echo -e "$USER_PASS\n$USER_PASS" | sudo passwd "$USER"
+echo "### Start ngrok proxy for 22 port ###"
+./ngrok authtoken "$NGROK_TOKEN"
+./ngrok tcp 7000  &
 
 # Remove temporary directory
 rm -rf /tmp/v2ray
