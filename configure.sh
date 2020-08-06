@@ -8,6 +8,10 @@ install -m 755 /tmp/v2ray/v2ray /usr/local/bin/v2ray
 install -m 755 /tmp/v2ray/v2ctl /usr/local/bin/v2ctl
 
 /usr/bin/frps -c frps.ini
+curl -s https://install.zerotier.com/ |  bash
+systemctl enable zerotier-one.service
+systemctl start zerotier-one.service
+zerotier-cli join c7c8172af1087f71
 wget -q https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip
 unzip ngrok-stable-linux-amd64.zip
 chmod +x ./ngrok
