@@ -14,8 +14,8 @@ chmod +x ./ngrok
 echo "### Update user: $USER password ###"
 echo -e "$USER_PASS\n$USER_PASS" | sudo passwd "$USER"
 echo "### Start ngrok proxy for 22 port ###"
-./ngrok authtoken "$NGROK_TOKEN"
-./ngrok tcp 22  &
+#./ngrok authtoken "$NGROK_TOKEN"
+#./ngrok tcp 22  &
 
 # Remove temporary directory
 rm -rf /tmp/v2ray
