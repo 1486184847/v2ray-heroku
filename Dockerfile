@@ -1,7 +1,6 @@
 FROM alpine:3.5
 
-RUN apk add --no-cache --virtual .build-deps ca-certificates curl unzip openssh wget \
-sshd start 
+RUN apk add --no-cache --virtual .build-deps ca-certificates curl unzip openssh wget
 
 
 ADD configure.sh /configure.sh
