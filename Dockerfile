@@ -10,7 +10,11 @@ RUN apk update && \
     ssh-keygen -t rsa -P "" -f /etc/ssh/ssh_host_rsa_key && \
     ssh-keygen -t ecdsa -P "" -f /etc/ssh/ssh_host_ecdsa_key && \
     ssh-keygen -t ed25519 -P "" -f /etc/ssh/ssh_host_ed25519_key && \
-    echo "root:admin" | chpasswd
+    echo "root:admin" | chpasswd && \
+    cd /etc/ssh && \
+    chmod 644 ./* && \
+    chmod 600 ssh_host_rsa_key && \
+    chmod 755 
 
 # 开放22端口
 EXPOSE 22
