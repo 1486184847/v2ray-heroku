@@ -3,7 +3,6 @@ PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:~/bin
 export PATH
 LANG=en_US.UTF-8
 cd ~
-
 setup_path="/www"
 python_bin=$setup_path/server/panel/pyenv/bin/python
 cpu_cpunt=$(cat /proc/cpuinfo|grep processor|wc -l)
